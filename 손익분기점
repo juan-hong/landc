@@ -1,0 +1,26 @@
+/*
+	프로젝트1 / 손익분기점 / 손익 분기점을 계산하는 프로그램
+	2022년 5월 23일 / 홍주안 화이팅
+*/
+
+#include <stdio.h>
+#pragma warning (disable:4996)
+
+int a, b, c;
+
+int main(void)
+{
+	scanf("%d %d %d", &a, &b, &c);
+
+	int n = 1;
+	int k = a + b * n;
+	while ((c * n) - (a + b * n) <= 0) {
+		if ((c * n) - (a + b * n) > (c * (n + 1)) - (a + b * (n + 1))) {
+			printf("-1\n");
+			return 0;
+		}
+		n++;
+	}
+	printf("%d\n", n);
+
+}
