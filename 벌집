@@ -1,0 +1,29 @@
+/*
+	프로젝트2 / 벌집 / 가장 가까운 벌집까지 가는데 최소거리는 어느정도 일까요?
+	2022년 5월 23일 / 홍주안 화이팅
+*/
+
+#include <stdio.h>
+#pragma warning (disable:4996)
+
+int main(void)
+{
+	int n;
+	int a = 0;
+	int sum = 1;
+	scanf("%d", &n);
+
+	while (1)
+	{
+		if (n == 1) {
+			printf("1\n");
+			break;
+		}
+		a++;
+		sum += (6 * a);
+		if (n <= sum) {
+			printf("%d\n", a + 1);
+			break;
+		}
+	}
+}
